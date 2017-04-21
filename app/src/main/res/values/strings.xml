@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">eBook Demo</string>
+    <string-array name="types_list">
+        <item>Flip Book</item>
+        <item>Interactive Book</item>
+        <item>Fee View</item>
+        <item>My Attendance</item>
+    </string-array>
+
+    <string-array name="rhyme">
+        <item>Row, row, row your boat</item>
+        <item>Gently down the stream,</item>
+        <item>Merrily merrily, merrily, merrily</item>
+        <item>Life is but a dream</item>
+        <item>...</item>
+        <item>...</item>
+        <item>Row, row, row your boat</item>
+        <item>Gently down the brook,</item>
+        <item>If you catch a little fish </item>
+        <item>Please let it off the hook </item>
+        <item>...</item>
+        <item>...</item>
+    </string-array>
+    <string name="title_activity_fees">Fees</string>
+    <string name="action_settings">Settings</string>
+</resources>

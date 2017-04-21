@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/horizontal_margin"
+    android:layout_marginRight="@dimen/horizontal_margin">
+
+    <TextView
+        android:id="@+id/list_item_fee_detail_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="18sp"
+        tools:text="20 Jun, 2016" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/list_item_fee_detail_particular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/secondary_text_light"
+                tools:text="Tution Fee" />
+
+            <TextView
+                android:id="@+id/list_item_fee_detail_dummy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/secondary_text_light"
+                tools:text="Some Dummy content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/list_item_fee_detail_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/secondary_text_light"
+            tools:text="20,000" />
+
+    </LinearLayout>
+
+</LinearLayout>
