@@ -14,11 +14,13 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".FlipbookActivity"
@@ -31,16 +33,24 @@
             android:name=".FeesActivity"
             android:label="@string/title_activity_fees"
             android:theme="@style/AppTheme.NoActionBar">
-
-            <!--
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".AttendanceActivity" />
+        <activity
+            android:name=".MyAttendanceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
         </activity>
-        <activity android:name=".AttendanceActivity" />
-        <activity android:name=".MyAttendanceActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
