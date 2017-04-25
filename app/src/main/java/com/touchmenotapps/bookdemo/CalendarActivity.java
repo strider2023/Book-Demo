@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
@@ -29,6 +30,7 @@ public class CalendarActivity extends AppCompatActivity {
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.toolbar_layout) CollapsingToolbarLayout appBarLayout;
     @BindView(R.id.calendar_conatiner) LinearLayout layout;
+    @BindView(R.id.calendar_data_conatiner) LinearLayout dataContainer;
 
     private LayoutTransition appbarTransition, baseContainerTransition;
 
@@ -56,7 +58,7 @@ public class CalendarActivity extends AppCompatActivity {
                     baseContainerTransition.setStartDelay(LayoutTransition.CHANGING, 0l);
                     layout.setLayoutTransition(baseContainerTransition);
                 } else if(transitionType == LayoutTransition.DISAPPEARING) {
-                    baseContainerTransition.setStartDelay(LayoutTransition.CHANGING, appbarTransition.getDuration(LayoutTransition.DISAPPEARING) - 50l);
+                    baseContainerTransition.setStartDelay(LayoutTransition.CHANGING, appbarTransition.getDuration(LayoutTransition.DISAPPEARING));
                     layout.setLayoutTransition(baseContainerTransition);
                 }
             }
@@ -70,6 +72,17 @@ public class CalendarActivity extends AppCompatActivity {
         });
 
         appBarLayout.setLayoutTransition(appbarTransition);
+
+        dataContainer.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if(calendarView.getVisibility() == View.VISIBLE) {
+                    calendarView.setVisibility(View.GONE);
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
