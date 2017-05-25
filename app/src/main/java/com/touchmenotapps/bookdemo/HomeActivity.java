@@ -38,6 +38,15 @@ public class HomeActivity extends AppCompatActivity {
                     case 3:
                         intent = new Intent(HomeActivity.this, AttendanceActivity.class);
                         break;
+                    case 4:
+                        intent = new Intent(HomeActivity.this, CalendarActivity.class);
+                        break;
+                    case 5:
+                        intent = new Intent(HomeActivity.this, TestHomeActivity.class);
+                        break;
+                    case 6:
+                        intent = new Intent(HomeActivity.this, BlinkScanActivity.class);
+                        break;
                 }
                 if(intent != null) {
                     startActivity(intent);

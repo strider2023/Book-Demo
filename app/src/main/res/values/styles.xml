@@ -14,7 +14,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:spinnerStyle">@style/AppTheme.Form.Spinner</item>
         <item name="android:spinnerItemStyle">@style/AppTheme.Form.Spinner.Item</item>
     </style>
@@ -26,6 +26,7 @@
         <item name="android:paddingRight">0dp</item>
         <item name="android:paddingEnd">0dp</item>
     </style>
+
     <style name="AppTheme.Form.Spinner.Item" parent="Widget.AppCompat.EditText">
         <item name="android:clickable">false</item>
     </style>

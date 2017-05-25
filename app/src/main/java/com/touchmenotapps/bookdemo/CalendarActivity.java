@@ -1,16 +1,12 @@
 package com.touchmenotapps.bookdemo;
 
-import android.animation.Animator;
 import android.animation.LayoutTransition;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
+import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,8 +17,12 @@ import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.os.Environment.getExternalStorageDirectory;
 
 public class CalendarActivity extends AppCompatActivity {
 
@@ -31,8 +31,13 @@ public class CalendarActivity extends AppCompatActivity {
     @BindView(R.id.toolbar_layout) CollapsingToolbarLayout appBarLayout;
     @BindView(R.id.calendar_conatiner) LinearLayout layout;
     @BindView(R.id.calendar_data_conatiner) LinearLayout dataContainer;
+    @BindView(R.id.toggle_sheet) CardView toogleSheet;
+    @BindView(R.id.bottom_sheet) View bottomSheet;
+    @BindView(R.id.path_text)
+    TextView paths;
 
     private LayoutTransition appbarTransition, baseContainerTransition;
+    private BottomSheetBehavior bottomSheetBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,10 @@ public class CalendarActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+        bottomSheetBehavior.setPeekHeight(0);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
 
         calendarView.setVisibility(View.GONE);
 
@@ -83,6 +92,25 @@ public class CalendarActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        toogleSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(calendarView.getVisibility() == View.GONE) {
+                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_COLLAPSED) {
+                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                    } else {
+                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    }
+                }
+            }
+        });
+
+        File[] external_AND_removable_storage_m1 = getExternalFilesDirs(null);
+        for(File file : external_AND_removable_storage_m1) {
+            paths.setText(paths.getText() + "\n" + file.getAbsolutePath());
+        }
+        paths.setText(paths.getText() + "\n" + getExternalStorageDirectory().getAbsolutePath());
     }
 
     @Override

@@ -5,6 +5,9 @@
         <item>Interactive Book</item>
         <item>Fee View</item>
         <item>My Attendance</item>
+        <item>Calendar</item>
+        <item>Custom Navigation</item>
+        <item>Blink Scan</item>
     </string-array>
 
     <string-array name="rhyme">
@@ -24,4 +27,33 @@
     <string name="title_activity_fees">Fees</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="title_activity_test_home">TestHomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="amount_title">Total Amount</string>
+    <string name="large_amount_title">Large Amount</string>
+    <string name="amount_msg">Position Total Amount in this frame</string>
+
+    <string name="tax_title">Tax Amount</string>
+    <string name="tax_msg">Position Total Tax Amount in this frame</string>
+
+    <string name="iban_title">IBAN</string>
+    <string name="iban_msg">Position IBAN in this frame</string>
+
+    <string name="email_title">E-Mail</string>
+    <string name="email_msg">Position e-mail in this frame</string>
+
+    <string name="date_title">Date</string>
+    <string name="date_msg">Position date in this frame</string>
+
+    <string name="raw_title">Raw text</string>
+    <string name="raw_msg">Position text in this frame</string>
+
+    <string name="vin_title">VIN</string>
+    <string name="vin_msg">Position VIN in this frame</string>
+
+    <string name="topup_title">TopUp</string>
+    <string name="topup_msg">Position TopUp code in this frame</string>
 </resources>
