@@ -51,8 +51,9 @@ public class TestHomeActivity extends AppCompatActivity
         /*navBarHeaderAdapter.addChild(android.R.drawable.sym_def_app_icon);
         navBarHeaderAdapter.addChild(android.R.drawable.sym_def_app_icon);
         navBarHeaderAdapter.setChildList(Arrays.asList(new String[]{"Name 1", "Name 2"}));*/
-        navBarHeaderAdapter.addChild(new ProfileDAO("Arindam Nath"));
-        navBarHeaderAdapter.addChild(new ProfileDAO("Maitri Nath"));
+        navBarHeaderAdapter.addChild(new ProfileDAO(this, "Arindam Nath"));
+        navBarHeaderAdapter.addChild(new ProfileDAO(this, "Maitri Nath"));
+        navBarHeaderAdapter.addChild(new ProfileDAO(this, "Aroon Nath"));
     }
 
     @Override

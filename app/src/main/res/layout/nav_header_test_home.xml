@@ -16,6 +16,13 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
+        <ImageView
+            android:id="@+id/header_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/boat"
+            android:tint="#80000000"/>
+
         <LinearLayout
             android:id="@+id/child_list_container"
             android:layout_width="match_parent"
@@ -24,11 +31,12 @@
             android:gravity="top|right"
             android:orientation="horizontal"/>
 
-        <ImageView
+        <LinearLayout
             android:id="@+id/selected_child"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_above="@+id/list_toggle"
+            android:orientation="vertical"
             app:srcCompat="@android:drawable/sym_def_app_icon" />
 
         <LinearLayout
@@ -47,17 +55,19 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/selected_child_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     android:text="Android Studio"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="2dp"
                     android:text="android.studio@android.com"
                     android:textColor="@android:color/white" />
 
@@ -78,8 +88,9 @@
         android:id="@+id/child_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:divider="@android:color/transparent"
         android:visibility="gone" />
 
 </LinearLayout>

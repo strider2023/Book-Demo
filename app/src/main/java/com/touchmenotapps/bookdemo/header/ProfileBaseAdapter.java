@@ -34,6 +34,12 @@ public class ProfileBaseAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public void swapProfiles(ProfileDAO from, ProfileDAO to) {
+        profileDAOs.remove(from);
+        profileDAOs.add(to);
+        notifyDataSetChanged();
+    }
+
     public void addProfiles(List<ProfileDAO> profileDAOs) {
         this.profileDAOs = profileDAOs;
         notifyDataSetChanged();
