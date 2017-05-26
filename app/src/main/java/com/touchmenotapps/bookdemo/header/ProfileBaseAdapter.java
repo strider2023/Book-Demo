@@ -1,6 +1,7 @@
 package com.touchmenotapps.bookdemo.header;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,6 +76,7 @@ public class ProfileBaseAdapter extends BaseAdapter {
 
         if(profileDAOs.get(position).getImage() != null) {
             holder.icon.setImageBitmap(profileDAOs.get(position).getImage());
+            holder.icon.setColorFilter(Color.argb(0, 255, 255, 255));
         } else {
             holder.title.setText(profileDAOs.get(position).getName());
         }

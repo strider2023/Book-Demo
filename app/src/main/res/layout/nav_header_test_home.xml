@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/boat"
-            android:tint="#80000000"/>
+            android:tint="#80000000" />
 
         <LinearLayout
             android:id="@+id/child_list_container"
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_above="@+id/list_toggle"
             android:gravity="top|right"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal" />
 
         <LinearLayout
             android:id="@+id/selected_child"
@@ -60,14 +60,13 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     android:text="Android Studio"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
                     android:text="android.studio@android.com"
                     android:textColor="@android:color/white" />
 
@@ -79,7 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:src="@android:drawable/arrow_down_float" />
+                android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                android:tint="@android:color/white" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -88,9 +88,12 @@
         android:id="@+id/child_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
         android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
         android:visibility="gone" />
 
 </LinearLayout>

@@ -4,23 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:paddingTop="16dp"
-    android:paddingBottom="16dp">
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
     <ImageView
         android:id="@+id/user_profile_list_image"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:src="@drawable/ic_account_circle_black_24dp"
         android:tint="@android:color/darker_gray"/>
 
     <TextView
+
         android:id="@+id/user_profile_list_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:layout_marginLeft="5dp"
-        android:textColor="@android:color/secondary_text_light"
+        android:textSize="14sp"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@android:color/tertiary_text_dark"
         android:text="Arindam Nath"/>
 
 </LinearLayout>

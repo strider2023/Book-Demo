@@ -1,5 +1,7 @@
 package com.touchmenotapps.bookdemo;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -48,12 +50,10 @@ public class TestHomeActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
         navBarHeaderAdapter = new NavBarHeaderAdapter(navigationView, drawer);
-        /*navBarHeaderAdapter.addChild(android.R.drawable.sym_def_app_icon);
-        navBarHeaderAdapter.addChild(android.R.drawable.sym_def_app_icon);
-        navBarHeaderAdapter.setChildList(Arrays.asList(new String[]{"Name 1", "Name 2"}));*/
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher_round);
         navBarHeaderAdapter.addChild(new ProfileDAO(this, "Arindam Nath"));
         navBarHeaderAdapter.addChild(new ProfileDAO(this, "Maitri Nath"));
-        navBarHeaderAdapter.addChild(new ProfileDAO(this, "Aroon Nath"));
+        navBarHeaderAdapter.addChild(new ProfileDAO(this, "Aroon Nath", bitmap));
     }
 
     @Override

@@ -227,9 +227,4 @@ public class NavBarHeaderAdapter {
     public void setOnHeaderItemSelected(OnHeaderItemSelected onHeaderItemSelected) {
         this.onHeaderItemSelected = onHeaderItemSelected;
     }
-
-    public void setChildListCustomAdapter(BaseAdapter adapter) {
-        childList.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
-    }
 }
