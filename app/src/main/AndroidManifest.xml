@@ -18,14 +18,23 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".FlipbookActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".InteractiveBookActivity"
@@ -34,10 +43,13 @@
             android:name=".FeesActivity"
             android:label="@string/title_activity_fees"
             android:theme="@style/AppTheme.NoActionBar">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".AttendanceActivity" />
         <activity
@@ -46,17 +58,25 @@
         <activity
             android:name=".CalendarActivity"
             android:label="@string/title_activity_calendar"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TestHomeActivity"
             android:label="@string/title_activity_test_home"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
+            android:theme="@style/AppTheme.NoActionBar">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
-        <activity android:name=".BlinkScanActivity"></activity>
+        <activity android:name=".BlinkScanActivity" />
+        <activity android:name=".KinderActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
     </application>
 
 </manifest>

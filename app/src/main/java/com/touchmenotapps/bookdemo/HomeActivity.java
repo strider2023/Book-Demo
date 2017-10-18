@@ -47,6 +47,9 @@ public class HomeActivity extends AppCompatActivity {
                     case 6:
                         intent = new Intent(HomeActivity.this, BlinkScanActivity.class);
                         break;
+                    case 7:
+                        intent = new Intent(HomeActivity.this, KinderActivity.class);
+                        break;
                 }
                 if(intent != null) {
                     startActivity(intent);
